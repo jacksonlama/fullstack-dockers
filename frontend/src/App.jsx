@@ -6,8 +6,8 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    const backendUrl = '';
-    axios.get(`${backendUrl}/api/example`)
+    const backendUrl = '/api';
+    axios.get(`${backendUrl}/example`)
       .then((res) => setMessage(res.data.message))
       .catch((err) => console.error(err));
   }, []);
